@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 07:55:42 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/06 07:51:56 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/06 13:36:58 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,17 +50,21 @@ t_stack **ft_push_swap(char **argv, t_stack **a, t_stack **b)
 int main(int argc, char **argv)
 {
     t_stack **a;
-    t_stack **b;
+    t_stack **b = NULL;
   
     a = malloc(sizeof(t_stack *));
-  /*   a = 0; */
-    b = malloc(sizeof(t_stack *));
-  /*   b = 0; */
+    *a = NULL;
+    if(a == NULL)
+        return (0);
+    /* b = malloc(sizeof(t_stack *)); */
+    /* *b = NULL; */
+  /*   if(b == NULL)
+        return (0); */
 
-    if(argc == 1)
+    /* if(argc == 1)
         return (0);
     if(!argc)
-        write(2, "error\n", 7);
+        write(2, "error\n", 7); */
     if(argc > 1)
         ft_push_swap(argv, a, b);
     return (0);

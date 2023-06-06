@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 11:36:08 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/05 10:11:48 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/06 13:36:42 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@
 # include "../libft/ft_printf/include/ft_printf.h"
 # include "../libft/Gnl/include/get_next_line.h"
 
-typedef struct s_stack
+typedef struct t_stack
 {
 	int					content;
-	struct s_stack		*next;
+	struct t_stack		*next;
 }	t_stack;
 
 void	ft_index_down(t_stack **a, t_stack **b, int smallest_pos);

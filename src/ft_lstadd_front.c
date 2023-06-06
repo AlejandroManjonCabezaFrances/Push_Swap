@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 08:10:41 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/05 15:09:24 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/06 13:12:26 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	ft_lstadd_front_ps(t_stack **lst, t_stack *new)
 {
-	printf("add1");
+	printf("%p\n%p\n", *lst, new);
+	printf("add1\n");
 	new->next = *lst;
-	printf("add2");
+	printf("add2\n");
 	*lst = new;
-	printf("add3");
+	printf("add3\n");
 }
 
 /* Descripción Añade el nodo ’new’ al principio de la lista ’lst’. */
-/* El nuevo nodo pasa a apuntar al nodo que antes era el primero de la lista.
-Se modifica el valor del puntero del primer nodo para que apunte al nuevo nodo  */
+/* new_next apunta a lo que apuntaba el *b. Se actualiza el *lst */

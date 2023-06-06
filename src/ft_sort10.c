@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 07:38:23 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/06 07:48:25 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/06 13:47:41 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int ft_find_position_smallest(t_stack **a)
     i = 1;
     aux = (*a)->next;   //inicializada 2 posicion lista
     aux2 = (*a);        //inicializada 1 posicion lista
+    printf("ft_find_position_smallest\n");
     while(aux)
     {
         if(aux->content < aux2->content)
@@ -33,6 +34,7 @@ int ft_find_position_smallest(t_stack **a)
         i++;
         aux = aux->next;
     }
+    printf("ft_find_position_smallest\n");
     return (smallest_pos);
 }
 
@@ -43,7 +45,9 @@ void ft_index_up(t_stack **a, t_stack **b, int smallest_pos)
         ft_ra(a);
         smallest_pos--;
     }
+    printf("ft_index_up\n");
     ft_pb(a, b);
+    printf("ft_index_up\n");
 }
 
 void ft_index_down(t_stack **a, t_stack **b, int smallest_pos)
@@ -53,7 +57,12 @@ void ft_index_down(t_stack **a, t_stack **b, int smallest_pos)
         ft_rra(a);
         smallest_pos++;
     }
+    printf("ft_index_down\n");
+    printf("b -> %p\n", *b);
     ft_pb(a, b);
+    printf("%d\n", (*b)->content);
+    printf("b -> %p\n", *b);
+    printf("ft_index_down\n");
 }
 
 int ft_sort10(t_stack **a, t_stack **b)
@@ -70,24 +79,30 @@ int ft_sort10(t_stack **a, t_stack **b)
         }
         if(ft_is_it_ordered(a) == 0)
             ft_sort3(a);
+        printf("sort10\n");
+        printf("a -> %p\n", *a);
+        printf("b -> %p\n", *b);
         while(ft_lstsize_ps(*b) != 0)
         {
             ft_pa(a, b);
         }
+        printf("sort10\n");
     return (0);
 }
 
 int ft_is_it_ordered(t_stack **a)
-{
+{ 
     t_stack *aux;
     
     aux = *a;
+    printf("ft_is_it_ordered\n");
     while(aux)
     {
         if(aux->next && aux->content > aux->next->content)
             return (0); //lista no ordenada
         aux = aux->next;
     }
+    printf("ft_is_it_ordered\n");
     return (1); //lista ordenada
 }
 

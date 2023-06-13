@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 11:36:08 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/06 13:36:42 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/13 18:50:16 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <string.h>
-#include <limits.h> //INT_MAX INT_MIN
+# include <limits.h> //INT_MAX INT_MIN
 
 # include "../libft/Libft/include/libft.h"
 # include "../libft/ft_printf/include/ft_printf.h"
@@ -42,7 +42,7 @@ void	ft_ss(t_stack **a, t_stack **b);
 void	ft_pa(t_stack **a, t_stack **b);
 void	ft_pb(t_stack **a, t_stack **b);
 void	ft_rr(t_stack **a, t_stack **b);
-void	ft_check_max_min(int nbr);
+void	ft_check_max_min(long nbr);
 void	ft_sort2(t_stack **a);
 void	ft_sort3(t_stack **a);
 void	del_ps(int *content);
@@ -60,6 +60,10 @@ int		ft_atol(const char *str);
 t_stack **ft_push_swap(char **argv, t_stack **a, t_stack **b);
 t_stack	*ft_lstlast_ps(t_stack *lst);
 t_stack	*ft_lstnew_ps(int content);
+void	ft_print_error(void);
+void	ft_check_argc(char **str);
+void 	ft_check_argc2(char **str);
+/* int  check_maxmin(char **str); */
 /* void 	bubble_sort(t_stack **a); */
 
 

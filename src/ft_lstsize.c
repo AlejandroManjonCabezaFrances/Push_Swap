@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 09:09:51 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/06 09:29:17 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/12 07:57:02 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 
 int	ft_lstsize_ps(t_stack *lst)
 {
+	t_stack *aux;
 	int	size;
 
+	aux = lst;
 	size = 0;
-	while (lst)
+	while (aux)
 	{
-		lst = lst->next;
+		aux = aux->next;
 		size++;
 	}
-	printf("lstsize\n");
 	return (size);
 }
 

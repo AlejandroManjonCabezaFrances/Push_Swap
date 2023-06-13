@@ -6,18 +6,17 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 10:55:13 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/05 07:39:49 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/13 17:53:05 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void ft_check_max_min(int nbr)
+void ft_check_max_min(long nbr)
 {
-    if(nbr >= INT_MAX || nbr <= INT_MIN)
+    if(nbr > INT_MAX || nbr < INT_MIN)
     {
-        write(2, "error\n", 7);
-        return;
+        ft_print_error();
     }
 }
 

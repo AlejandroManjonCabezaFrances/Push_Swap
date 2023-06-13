@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:02:53 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/06 07:47:56 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/12 10:07:54 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 void ft_type_of_sorting(t_stack **a, t_stack **b)
 {
-    b = 0;
-    if (ft_is_it_ordered(a) == 0)
+    if(ft_is_it_ordered(a) == 0)
     {
         if(ft_lstsize_ps(*a) == 2)
             ft_sort2(a);

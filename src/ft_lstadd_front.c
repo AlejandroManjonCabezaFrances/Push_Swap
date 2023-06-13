@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 08:10:41 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/06 13:12:26 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/12 07:57:53 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,8 @@
 
 void	ft_lstadd_front_ps(t_stack **lst, t_stack *new)
 {
-	printf("%p\n%p\n", *lst, new);
-	printf("add1\n");
 	new->next = *lst;
-	printf("add2\n");
 	*lst = new;
-	printf("add3\n");
 }
 
 /* Descripción Añade el nodo ’new’ al principio de la lista ’lst’. */

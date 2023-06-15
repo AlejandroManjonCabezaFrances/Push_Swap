@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:02:53 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/12 10:07:54 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/15 17:50:39 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,25 @@ void ft_type_of_sorting(t_stack **a, t_stack **b)
             ft_sort3(a);
         else if(ft_lstsize_ps(*a) > 3 && ft_lstsize_ps(*a) <= 10)
             ft_sort10(a, b);
+        /* else if(ft_lstsize_ps(*a) > 10 && ft_lstsize_ps(*a) <= 100)
+            ft_sort100(a, b); */
     }
     else
         return ;
+}
+
+int ft_is_it_ordered(t_stack **a)
+{ 
+    t_stack *aux;
+    
+    aux = *a;
+    while(aux)
+    {
+        if(aux->next && aux->content > aux->next->content)
+            return (0); //lista no ordenada
+        aux = aux->next;
+    }
+    return (1); //lista ordenada
 }
 
 void ft_sort2(t_stack **a)

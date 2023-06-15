@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 11:36:08 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/13 18:50:16 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/15 17:48:53 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,9 +62,9 @@ t_stack	*ft_lstlast_ps(t_stack *lst);
 t_stack	*ft_lstnew_ps(int content);
 void	ft_print_error(void);
 void	ft_check_argc(char **str);
-void 	ft_check_argc2(char **str);
-/* int  check_maxmin(char **str); */
-/* void 	bubble_sort(t_stack **a); */
+void	ft_repeat_numbers(t_stack **a);
+/* void	ft_sort100(t_stack **a, t_stack **b); */
+/* void 	ft_bubble_sort(t_stack **a); */
 
 
 #endif

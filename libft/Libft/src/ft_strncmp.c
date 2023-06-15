@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 09:15:27 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/05/12 07:33:08 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/14 08:25:46 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (0);
 }
 
-/*int main(void)
+/* int main(void)
 {
-	char s1[] = "quiero mi baguette";
-	char s2[] = "quiero mi baguettz";
+	char s1[] = "hola";
+	char s2[] = "holo";
 
-	printf("%d\n", strncmp(s1, s2, 0));
-	printf("%d", ft_strncmp(s1, s2, 0));
+	printf("%d\n", strncmp(s1, s2, 5));
+	printf("%d", ft_strncmp(s1, s2, 5));
 	return (0);
-}*/
+} */

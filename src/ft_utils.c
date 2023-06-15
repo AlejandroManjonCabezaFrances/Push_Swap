@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 10:55:13 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/13 17:53:05 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/15 11:17:54 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,28 @@ int ft_atol(const char *str)
     }
     result = result * neg;
     ft_check_max_min(result);
-
     return ((int)result);
 }
+
+/* void ft_bubble_sort(t_stack **a)
+{
+    int aux;
+    t_stack *temp;
+
+    temp = *a;
+    while((*a)->next != NULL)
+    {
+        if(temp->content > temp->next->content)
+        {
+            aux = temp->content;
+            temp->content = temp->next->content;
+            temp->next->content = aux;
+            *a = temp;
+        }
+        else
+            *a = (*a)->next;
+    }
+    *a = temp;
+} */
 
 

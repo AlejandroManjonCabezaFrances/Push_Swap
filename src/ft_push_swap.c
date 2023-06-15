@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 07:55:42 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/13 18:54:37 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/15 18:22:52 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ t_stack **ft_push_swap(char **argv, t_stack **a, t_stack **b)
 
     i = 1;    
     c = ' ';
+    str = 0;
     while(argv[i])
     {
         str = ft_split(argv[i], c);
@@ -33,6 +34,7 @@ t_stack **ft_push_swap(char **argv, t_stack **a, t_stack **b)
         }
         i++;
     }
+    ft_repeat_numbers(a);
     ft_type_of_sorting(a, b);    
     return (a);
 }
@@ -51,11 +53,6 @@ int main(int argc, char **argv)
     *b = NULL;
     if(b == NULL)
         return (0);
-
-    /* if(argc == 1)
-        return (0);
-    if(!argc)
-        write(2, "error\n", 7); */
     if(argc > 1)
        a = ft_push_swap(argv, a, b);
     if (!a)

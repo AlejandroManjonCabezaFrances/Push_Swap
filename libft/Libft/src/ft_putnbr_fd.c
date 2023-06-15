@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 12:01:31 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/05/12 07:32:09 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/14 10:59:53 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 }
 
-int main(void)
+/* int main(void)
 {
 	ft_putnbr_fd(875, 1);
 	return (0);
-}
+} */

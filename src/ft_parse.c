@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 10:18:20 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/15 18:15:21 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/16 13:32:28 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ void ft_check_argc(char **str)
             }
             if((str[i][j] < '0' || str[i][j] > '9') && (str[i][j] != '+' && str[i][j] != '-'))   
                     ft_print_error(); 
-            /* if(ft_strlen(str[i]) == 0)
-                ft_print_error();  */            
+            /* if(ft_strlen(str[i]) == 1)
+                ft_print_error();  */        
             j++;
         }
         i++;

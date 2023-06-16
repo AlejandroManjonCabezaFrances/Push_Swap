@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 07:38:23 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/15 12:53:33 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/16 11:25:32 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int ft_find_position_smallest(t_stack **a)
 {
+    t_stack *aux;
 	int smallest_pos;
     int smallest_num;
     int i;
-    t_stack *aux;
 
     smallest_pos = 0;
     i = 1;
@@ -30,8 +30,8 @@ int ft_find_position_smallest(t_stack **a)
             smallest_num = aux->content;
             smallest_pos = i;
         }
-        i++;
         aux = aux->next;
+        i++;
     }
     return (smallest_pos);
 }

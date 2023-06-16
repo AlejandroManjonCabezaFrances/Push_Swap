@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 11:36:08 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/15 17:48:53 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/16 11:38:38 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct t_stack
 {
 	int					content;
 	struct t_stack		*next;
+	struct t_stack		*back;
 }	t_stack;
 
 void	ft_index_down(t_stack **a, t_stack **b, int smallest_pos);
@@ -63,8 +64,13 @@ t_stack	*ft_lstnew_ps(int content);
 void	ft_print_error(void);
 void	ft_check_argc(char **str);
 void	ft_repeat_numbers(t_stack **a);
-/* void	ft_sort100(t_stack **a, t_stack **b); */
+int		ft_sort100(t_stack **a, t_stack **b);
+int		ft_find_number_biggest(t_stack **a);
+int		ft_find_position_biggest(t_stack **b);
+void	ft_index_up_b(t_stack **a, t_stack **b, int biggest_pos);
+void	ft_index_down_b(t_stack **a, t_stack **b, int biggest_pos);
+
+
+
 /* void 	ft_bubble_sort(t_stack **a); */
-
-
 #endif

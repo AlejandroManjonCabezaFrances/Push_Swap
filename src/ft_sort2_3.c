@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:02:53 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/15 17:50:39 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/16 12:57:06 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void ft_type_of_sorting(t_stack **a, t_stack **b)
 {
+    int bit;
+
+    bit = 0;
     if(ft_is_it_ordered(a) == 0)
     {
         if(ft_lstsize_ps(*a) == 2)
@@ -22,8 +25,9 @@ void ft_type_of_sorting(t_stack **a, t_stack **b)
             ft_sort3(a);
         else if(ft_lstsize_ps(*a) > 3 && ft_lstsize_ps(*a) <= 10)
             ft_sort10(a, b);
-        /* else if(ft_lstsize_ps(*a) > 10 && ft_lstsize_ps(*a) <= 100)
-            ft_sort100(a, b); */
+        else if(ft_lstsize_ps(*a) > 10 && ft_lstsize_ps(*a) <= 100)
+            ft_sort100(a, b);
+    
     }
     else
         return ;
@@ -50,7 +54,9 @@ void ft_sort2(t_stack **a)
 }
 
 void ft_sort3(t_stack **a)
-{   
+{  
+    ft_printf("mi ft_printf->scooby dooby\n");
+    printf("printf sistema->scooby dooby\n"); 
     if((*a)->content > (*a)->next->content && (*a)->content < (*a)->next->next->content && (*a)->next->content < (*a)->next->next->content)
         ft_sa(a);
     else if((*a)->content > (*a)->next->content && (*a)->next->content > (*a)->next->next->content && (*a)->content > (*a)->next->next->content)

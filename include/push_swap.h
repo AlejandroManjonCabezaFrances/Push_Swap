@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 11:36:08 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/16 11:38:38 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/19 16:50:35 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,6 @@ int		ft_find_number_biggest(t_stack **a);
 int		ft_find_position_biggest(t_stack **b);
 void	ft_index_up_b(t_stack **a, t_stack **b, int biggest_pos);
 void	ft_index_down_b(t_stack **a, t_stack **b, int biggest_pos);
-
-
-
+int ft_intervals_left(t_stack **a, int i);
 /* void 	ft_bubble_sort(t_stack **a); */
 #endif

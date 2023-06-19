@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:05:09 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/16 14:10:23 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/19 17:17:35 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,12 @@ int ft_find_position_biggest(t_stack **b)
 
 void ft_index_up_b(t_stack **a, t_stack **b, int biggest_pos)
 {
-    while(biggest_pos > 1)
+    while(biggest_pos < 1)
     {
         ft_rb(b);
         biggest_pos--;
     }
+   
     ft_pa(a, b);
 }
 
@@ -55,36 +56,75 @@ void ft_index_down_b(t_stack **a, t_stack **b, int biggest_pos)
     ft_pa(a, b);
 }
 
-int ft_sort100(t_stack **a, t_stack **b)
+// 100
+// 1er intervalo: de numero menor a X (25 por ejemplo)
+// ultimo cachito 75 - numero mayor
+// 100 / 4 = 25
+// funcion que comprueba que si quedan mas numeros en ese intervalo
+// si no quedan, cambiamos de intervalo (por ejemplo 25-50)
+// determinar si el numero mayor esta mas cerca si hacemos reverse rotate o rotate
+// guardarse el numero mayor 
+
+int ft_intervals_left(t_stack **a, int i)
 {
-    int key_nbr;
     t_stack *aux;
-    int biggest_pos;
-    
+
     aux = *a;
-    key_nbr = ft_find_number_biggest(a) / 4;
-    while(aux)
+    while (aux)
     {
-        if(aux->content <= key_nbr)
-            ft_pb(a, b);
-        else
-        {
-            ft_ra(a);
-            /* aux = aux->back; */
-        }
+
+        if (aux->content == ft_find_number_biggest(a))
+            return (0);
+        if (aux->content < i)
+            return (1);
         aux = aux->next;
-    }
-    biggest_pos = ft_find_position_biggest(b);
-    while(ft_lstsize_ps(*b) > 0)
-    {
-        if(biggest_pos <= ft_lstsize_ps(*b) / 2)
-            ft_index_up(a, b, biggest_pos);
-        else if(biggest_pos > ft_lstsize_ps(*b) / 2)
-            ft_index_down(a, b, biggest_pos);
     }
     return (0);
 }
 
+int ft_sort100(t_stack **a, t_stack **b)
+{
+    t_stack *aux;
+    int key_nbr;
+    int biggest_pos;
+    int interval;
+    
+    aux = *a;
+    key_nbr = ft_find_number_biggest(a) / 4;
+    interval = 0;
+    while(aux)
+    {      
+        aux = *a;
+        if (!aux)
+            break;
+        if(aux->content <= interval)
+        {
+            ft_pb(a, b);
+        }
+        else
+            ft_ra(a);
+        if (ft_intervals_left(a, interval) == 0)
+        {
+            interval = interval + key_nbr;
+            printf("interval = %d\n", interval);
+        }
+
+    }
+            while(*b)
+            {
+                printf("%d\n", (*b)->content);
+                *b = (*b)->next;
+            }
+    while(ft_lstsize_ps(*b) > 0)
+    {
+        biggest_pos = ft_find_position_biggest(b);
+        if(biggest_pos <= ft_lstsize_ps(*b) / 2)
+            ft_index_up_b(a, b, biggest_pos);
+        else
+            ft_index_down_b(a, b, biggest_pos);
+    }
+    return (0);
+}
 
 int ft_find_number_biggest(t_stack **a)
 {

@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 12:11:35 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/12 07:56:06 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/19 16:31:20 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void ft_pb(t_stack **a, t_stack **b)
 {
     t_stack *aux;
 
-    if (ft_lstsize_ps(*a) > 1)
+    if (ft_lstsize_ps(*a) > 0)
     {
         aux = *a;
         *a = (*a)->next;    //actualiza nodo a (estará vacío o apunta al 2º)

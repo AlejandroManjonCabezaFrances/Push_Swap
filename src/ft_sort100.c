@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:05:09 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/19 17:17:35 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/19 18:49:29 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,12 @@ int ft_find_position_biggest(t_stack **b)
 
 void ft_index_up_b(t_stack **a, t_stack **b, int biggest_pos)
 {
-    while(biggest_pos < 1)
+    while(biggest_pos > 1)
     {
+        printf("index_up\n");
         ft_rb(b);
         biggest_pos--;
     }
-   
     ft_pa(a, b);
 }
 
@@ -50,6 +50,7 @@ void ft_index_down_b(t_stack **a, t_stack **b, int biggest_pos)
 {
     while(biggest_pos <= ft_lstsize_ps(*b))
     {
+        printf("index down\n");
         ft_rrb(b);
         biggest_pos++;
     }
@@ -72,7 +73,6 @@ int ft_intervals_left(t_stack **a, int i)
     aux = *a;
     while (aux)
     {
-
         if (aux->content == ft_find_number_biggest(a))
             return (0);
         if (aux->content < i)
@@ -108,7 +108,6 @@ int ft_sort100(t_stack **a, t_stack **b)
             interval = interval + key_nbr;
             printf("interval = %d\n", interval);
         }
-
     }
             while(*b)
             {
@@ -118,9 +117,10 @@ int ft_sort100(t_stack **a, t_stack **b)
     while(ft_lstsize_ps(*b) > 0)
     {
         biggest_pos = ft_find_position_biggest(b);
+        printf("biggest_pos = %d\n", biggest_pos);
         if(biggest_pos <= ft_lstsize_ps(*b) / 2)
             ft_index_up_b(a, b, biggest_pos);
-        else
+        else if(biggest_pos > (ft_lstsize_ps(*b) / 2))
             ft_index_down_b(a, b, biggest_pos);
     }
     return (0);

@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 08:10:41 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/05/16 13:23:05 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/22 11:47:01 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,4 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 
 /* Descripción Añade el nodo ’new’ al principio de la lista ’lst’. */
 /* El nuevo nodo pasa a apuntar al nodo que antes era el primero de la lista.
-Se modifica el valor del puntero del primer nodo para que apunte al nuevo nodo  */
+modifica valor del puntero del primer nodo para que apunte al nuevo nodo*/

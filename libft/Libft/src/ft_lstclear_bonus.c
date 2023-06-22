@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 08:03:09 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/05/22 10:12:21 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/22 11:49:10 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,9 @@ void	del(void *content)
 	return(0);
 } */
 
-/* Descripción Itera la lista ’lst’ y aplica la función ’f’ en el contenido de cada nodo. */
-/* Parámetros lst: un puntero al primer nodo.f: un puntero a la función que utilizará cada nodo. */
-/* Libera la memoria de todos los nodos de una lista y los borra."la lista estará vacía"  */
+/* Descripción Itera la lista ’lst’ y aplica la función ’f’
+en el contenido de cada nodo.
+Parámetros lst: un puntero al primer nodo.f: un puntero
+ a la función que utilizará cada nodo.
+Libera la memoria de todos los nodos de una lista y los
+ borra."la lista estará vacía"  */

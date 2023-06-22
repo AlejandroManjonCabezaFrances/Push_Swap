@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 08:03:09 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/05/31 09:56:18 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/22 12:06:33 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,9 @@ void	del_ps(int *content)
 	free(content);
 }
 
-/* Descripción Itera la lista ’lst’ y aplica la función ’f’ en el contenido de cada nodo. */
-/* Parámetros lst: un puntero al primer nodo.f: un puntero a la función que utilizará cada nodo. */
-/* Función del. borra el contenido del nodo y función free libera me memoria ocupada por el nodo */
-
+/* Descripción Itera la lista ’lst’ y aplica la función ’f’
+en el contenido de cada nodo.
+Parámetros lst: un puntero al primer nodo.f: un puntero
+a la función que utilizará cada nodo.
+Función del. borra el contenido del nodo y función free
+libera me memoria ocupada por el nodo */

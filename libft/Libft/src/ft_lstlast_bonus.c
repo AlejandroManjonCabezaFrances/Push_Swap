@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 09:53:18 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/05/22 10:09:52 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/22 12:00:18 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstlast(t_list *lst)
 	{
 		if (lst->next == NULL)
 			break ;
-		lst = lst->next; 
+		lst = lst->next;
 	}
 	return (lst);
 }

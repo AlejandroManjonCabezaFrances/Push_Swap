@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 10:18:20 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/22 13:05:36 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/27 09:31:20 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,18 @@ void	ft_check_argc(char **str)
 	int	j;
 
 	i = 0;
+	if (str[i] == NULL)
+		ft_print_error();
 	while (str[i])
 	{
 		j = 0;
 		while (str[i][j])
 		{
 			if (str[i][j] == '+' || str[i][j] == '-')
-			{
-				if (str[i][j + 1] == '+' || str[i][j + 1] == '-' )
-					ft_print_error();
-				if (str[i][j + 1] == '\0' || ((j != 0) && (str[i][j - 1] >= '0'
-					&& str[i][j - 1] <= '9')))
+			{		
+				if (str[i][j + 1] == '+' || str[i][j + 1] == '\0' || j != 0
+					|| (str[i][j + 1] == '-' && str[i][j - 1] >= '0'
+					&& str[i][j - 1] <= '9'))
 					ft_print_error();
 			}
 			if ((str[i][j] < '0' || str[i][j] > '9') && (str[i][j] != '+'

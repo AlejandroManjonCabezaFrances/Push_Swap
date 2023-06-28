@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 07:38:23 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/22 13:06:15 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/27 07:58:12 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_sort10(t_stack **a, t_stack **b)
 
 	while (ft_lstsize_ps(*a) > 3)
 	{
-		smallest_pos = ft_find_position_smallest(a);
+		smallest_pos = ft_find_smallest_position(a);
 		if (smallest_pos <= (ft_lstsize_ps(*a) / 2))
 			ft_index_up(a, b, smallest_pos);
 		else if (smallest_pos > (ft_lstsize_ps(*a) / 2))

@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 12:34:55 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/22 13:29:46 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/28 18:09:14 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ void	ft_rra(t_stack **a)
 	{
 		aux = *a;
 		tail = ft_lstlast_ps(aux);
-		while (aux->next != tail)
+		while (aux->next != NULL && aux->next != tail)
 			aux = aux->next;
 		aux->next = NULL;
 		ft_lstadd_front_ps(a, tail);
-		write(1, "rra\n", 5);
+		write(1, "rra\n", 4);
 	}
 }
 
@@ -38,11 +38,11 @@ void	ft_rrb(t_stack **b)
 	{
 		aux = *b;
 		tail = ft_lstlast_ps(aux);
-		while (aux->next != tail)
+		while (aux->next != NULL && aux->next != tail)
 			aux = aux->next;
 		aux->next = NULL;
 		ft_lstadd_front_ps(b, tail);
-		write(1, "rrb\n", 5);
+		write(1, "rrb\n", 4);
 	}
 }
 
@@ -55,17 +55,16 @@ void	ft_rrr(t_stack **a, t_stack **b)
 	{
 		aux = *a;
 		tail = ft_lstlast_ps(aux);
-		while (aux->next != tail)
+		while (aux->next != NULL && aux->next != tail)
 			aux = aux->next;
 		aux->next = NULL;
 		ft_lstadd_front_ps(a, tail);
 		aux = *b;
 		tail = ft_lstlast_ps(aux);
-		while (aux->next != tail)
+		while (aux->next != NULL && aux->next != tail)
 			aux = aux->next;
 		aux->next = NULL;
 		ft_lstadd_front_ps(b, tail);
-		write(1, "rrr\n", 5);
+		write(1, "rrr\n", 4);
 	}
 }
-/* while(aux->next != NULL && aux->next != tail) */

@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:02:53 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/22 15:58:10 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/27 09:03:02 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,15 +47,12 @@ int	ft_is_it_ordered(t_stack **a)
 	}
 	return (1);
 }
-//0 -> lista no ordenada
-//1 -> lista ordenada
 
 void	ft_sort2(t_stack **a)
 {
 	if ((*a)->content > (*a)->next->content)
 		ft_sa(a);
 }
-
 
 void	ft_sort3(t_stack **a)
 {
@@ -84,59 +81,3 @@ void	ft_sort3(t_stack **a)
 	else
 		ft_rra(a);
 }
-
-/* void	ft_sort3(t_stack **a)
-{
-	if ((*a)->content > (*a)->next->content
-		&& (*a)->content < (*a)->next->next->content
-		&& (*a)->next->content < (*a)->next->next->content)
-		ft_sa(a);
-	else if ((*a)->next->content > (*a)->next->next->content)
-	{
-		ft_sa(a);
-		if ((*a)->content > (*a)->next->content
-			&& (*a)->content > (*a)->next->next->content)
-			ft_rra(a);
-		else if ((*a)->next->next->content > (*a)->content
-			&& (*a)->content < (*a)->next->content)
-			ft_ra(a);
-	}
-	else if ((*a)->next->next->content < (*a)->content
-		&& (*a)->next->next->content > (*a)->next->content
-		&& (*a)->content > (*a)->next->content)
-		ft_ra(a);
-	else if ((*a)->content < (*a)->next->content
-		&& (*a)->content > (*a)->next->next->content
-		&& (*a)->next->content > (*a)->next->next->content)
-		ft_rra(a);
-} */
-
-/* void	ft_sort3(t_stack **a)
-{
-	if ((*a)->content > (*a)->next->content
-		&& (*a)->content < (*a)->next->next->content
-		&& (*a)->next->content < (*a)->next->next->content)
-		ft_sa(a);
-	else if ((*a)->content > (*a)->next->content
-		&& (*a)->next->content > (*a)->next->next->content
-		&& (*a)->content > (*a)->next->next->content)
-	{
-		ft_sa(a);
-		ft_rra(a);
-	}
-	else if ((*a)->next->next->content < (*a)->content
-		&& (*a)->next->next->content > (*a)->next->content
-		&& (*a)->content > (*a)->next->content)
-		ft_ra(a);
-	else if ((*a)->next->next->content < (*a)->next->content
-		&& (*a)->next->next->content > (*a)->content
-		&& (*a)->content < (*a)->next->content)
-	{
-		ft_sa(a);
-		ft_ra(a);
-	}
-	else if ((*a)->content < (*a)->next->content
-		&& (*a)->content > (*a)->next->next->content
-		&& (*a)->next->content > (*a)->next->next->content)
-		ft_rra(a);
-} */

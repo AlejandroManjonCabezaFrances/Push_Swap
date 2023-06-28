@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 11:36:08 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/22 11:59:27 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/27 07:56:48 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ typedef struct t_stack
 {
 	int					content;
 	struct t_stack		*next;
-	struct t_stack		*back;
 }	t_stack;
 
 t_stack	**ft_push_swap(char **argv, t_stack **a, t_stack **b);
@@ -38,7 +37,7 @@ void	ft_index_down_b(t_stack **a, t_stack **b, int biggest_pos);
 void	ft_index_down(t_stack **a, t_stack **b, int smallest_pos);
 void	ft_index_up_b(t_stack **a, t_stack **b, int biggest_pos);
 void	ft_index_up(t_stack **a, t_stack **b, int smallest_pos);
-void	ft_lstclear_ps(t_stack **lst, void (*del)(int *));
+void	ft_lstclear_ps(t_stack **lst);
 void	ft_lstadd_front_ps(t_stack **lst, t_stack *new);
 void	ft_lstdelone_ps(t_stack *lst, void (*del)(int));
 void	ft_lstadd_back_ps(t_stack **lst, t_stack *new);
@@ -65,11 +64,11 @@ void	ft_sb(t_stack **b);
 void	ft_ra(t_stack **a);
 void	ft_rb(t_stack **b);
 
-int		ft_find_position_smallest(t_stack **a);
-int		ft_find_position_biggest(t_stack **b);
-int		ft_find_number_smallest(t_stack **a);
+int		ft_find_smallest_position(t_stack **a);
+int		ft_find_biggest_position(t_stack **b);
+int		ft_find_smallest_number(t_stack **a);
 int		ft_sort10(t_stack **a, t_stack **b);
-int		ft_find_number_biggest(t_stack **a);
+int		ft_find_biggest_number(t_stack **a);
 int		ft_is_it_ordered(t_stack **a);
 int		ft_lstsize_ps(t_stack *lst);
 int		main(int argc, char **argv);

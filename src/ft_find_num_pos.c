@@ -6,13 +6,13 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 11:35:24 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/22 12:04:49 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/27 08:16:26 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	ft_find_position_smallest(t_stack **a)
+int	ft_find_smallest_position(t_stack **a)
 {
 	t_stack	*aux;
 	int		smallest_pos;
@@ -36,7 +36,7 @@ int	ft_find_position_smallest(t_stack **a)
 	return (smallest_pos);
 }
 
-int	ft_find_position_biggest(t_stack **b)
+int	ft_find_biggest_position(t_stack **b)
 {
 	t_stack	*aux;
 	int		biggest_pos;
@@ -48,7 +48,7 @@ int	ft_find_position_biggest(t_stack **b)
 	i = 1;
 	while (aux)
 	{
-		if (aux->content > biggest_num)
+		if (aux->content >= biggest_num)
 		{
 			biggest_num = aux->content;
 			biggest_pos = i;
@@ -59,7 +59,7 @@ int	ft_find_position_biggest(t_stack **b)
 	return (biggest_pos);
 }
 
-int	ft_find_number_smallest(t_stack **a)
+int	ft_find_smallest_number(t_stack **a)
 {
 	t_stack	*aux;
 	int		smallest_number;
@@ -75,7 +75,7 @@ int	ft_find_number_smallest(t_stack **a)
 	return (smallest_number);
 }
 
-int	ft_find_number_biggest(t_stack **a)
+int	ft_find_biggest_number(t_stack **a)
 {
 	t_stack	*aux;
 	int		biggest_num;
@@ -85,7 +85,7 @@ int	ft_find_number_biggest(t_stack **a)
 	while (aux)
 	{
 		if (aux->content > biggest_num)
-		biggest_num = aux->content;
+			biggest_num = aux->content;
 		aux = aux->next;
 	}
 	return (biggest_num);

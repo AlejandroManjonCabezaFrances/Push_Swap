@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 07:55:42 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/22 13:05:56 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/28 18:08:17 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,10 @@ t_stack	**ft_push_swap(char **argv, t_stack **a, t_stack **b)
 		while (str[j])
 		{
 			ft_lstadd_back_ps(a, ft_lstnew_ps(ft_atol(str[j])));
+			free(str[j]);
 			j++;
 		}
+		free(str);
 		i++;
 	}
 	ft_repeat_numbers(a);
@@ -41,7 +43,6 @@ int	main(int argc, char **argv)
 {
 	t_stack	**a;
 	t_stack	**b;
-	t_stack	*aux;
 
 	a = malloc(sizeof(t_stack *));
 	*a = NULL;
@@ -53,13 +54,9 @@ int	main(int argc, char **argv)
 		return (0);
 	if (argc > 1)
 		a = ft_push_swap(argv, a, b);
-	if (!a)
-		ft_print_error();
-	aux = *a;
-	while (aux)
-	{
-		printf("main ->%d\n", aux->content);
-		aux = aux->next;
-	}
+	ft_lstclear_ps(a);
+	ft_lstclear_ps(b);
+	free(a);
+	free(b);
 	return (0);
 }

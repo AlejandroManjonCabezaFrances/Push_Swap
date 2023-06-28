@@ -6,33 +6,29 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 08:03:09 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/22 12:06:33 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/27 07:23:58 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	ft_lstclear_ps(t_stack **lst, void (*del)(int *))
+void	ft_lstclear_ps(t_stack **lst)
 {
-	t_stack	*next;
+	t_stack	*aux;
 
-	if (lst != NULL && del != NULL)
+	while (*lst)
 	{
-		while (*lst != NULL)
-		{
-			next = (*lst)->next;
-			del_ps(&(*lst)->content);
-			free(*lst);
-			*lst = (*lst)->next;
-		}
+		aux = (*lst)->next;
+		free(*lst);
+		(*lst) = aux;
 	}
+	*lst = NULL;
 }
 
-void	del_ps(int *content)
+/* void	del_ps(int *content)
 {
 	free(content);
-}
-
+} */
 /* Descripción Itera la lista ’lst’ y aplica la función ’f’
 en el contenido de cada nodo.
 Parámetros lst: un puntero al primer nodo.f: un puntero

@@ -6,7 +6,7 @@
 /*   By: amanjon- <amanjon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:04:54 by amanjon-          #+#    #+#             */
-/*   Updated: 2023/06/22 13:03:18 by amanjon-         ###   ########.fr       */
+/*   Updated: 2023/06/27 07:57:25 by amanjon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	ft_sort500(t_stack **a, t_stack **b)
 	int	biggest_pos;
 	int	smallest_number;
 
-	smallest_number = ft_find_number_smallest(a);
-	chunks = ft_find_number_biggest(a) / 8;
+	smallest_number = ft_find_smallest_number(a);
+	chunks = ft_find_biggest_number(a) / 8;
 	while (ft_lstsize_ps(*a) > 0)
 	{
 		ft_push_chunks_to_b(a, b, smallest_number);
@@ -27,7 +27,7 @@ void	ft_sort500(t_stack **a, t_stack **b)
 	}
 	while (ft_lstsize_ps(*b) > 0)
 	{
-		biggest_pos = ft_find_position_biggest(b);
+		biggest_pos = ft_find_biggest_position(b);
 		if (biggest_pos <= (ft_lstsize_ps(*b) / 2))
 			ft_index_up_b(a, b, biggest_pos);
 		else if (biggest_pos > (ft_lstsize_ps(*b) / 2))
